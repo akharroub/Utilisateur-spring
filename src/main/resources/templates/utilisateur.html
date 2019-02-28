@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" />
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/utilisateur.css}"/>
+</head>
+<body>
+	<h1>Les Utilisatuers</h1>
+
+	<table>
+		<tr th:each="u:${utilisateur}">
+			<td th:text="${u.id}"></td>
+			<td th:text="${u.nom}"></td>
+			<td th:text="${u.prenom}"></td>
+			<td th:text="${u.numero}"></td>
+			<td th:text="${u.phone}"></td>
+			<td th:text="${u.email}"></td>
+			<td th:text="${u.adresse}"></td>
+			<td th:text="${u.photo}"></td>
+			<td><a th:href="@{utilisateur-info(id=${u.id})}">voir</a></td>
+		</tr>
+	</table>
+</body>
+</html>

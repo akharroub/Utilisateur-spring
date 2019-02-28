@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+table{
+	background: aqua;
+	border: 2px solid blue;
+	margin: auto;
+}
+h1{
+	text-align: center;
+	font: bold;
+	font-size: xx-large;
+	background: #a2dfea;
+	}
+	tr{
+	border: 1px solid blue;
+	}
+	td{
+	border: 1px solid blue;
+	}

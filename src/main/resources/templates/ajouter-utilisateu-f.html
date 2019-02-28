@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/ajouter.css}"/>
+</head>
+<body>
+<form th:action="@{ajouter-user}" method="post" th:object="${u}">
+<fieldset>
+<legend>Vos Coordonnées</legend>
+
+<label for="nom">nom</label>
+<input type="text" id="nom" name="nom" class="info" th:field="*{nom}"/><br/><br/>
+
+<label for="prenom">prenom :</label>
+<input type="text" id="prenom" name="prenom" class="info" th:field="*{prenom}"/><br/><br/>
+
+<label for="numero">numero :</label>
+<input type="text" id="numero" name="numero" class="info" th:field="*{numero}"/><br/><br/>
+
+<label for="phone">phone :</label>
+<input type="text" id="phone" name="phone" class="info" th:field="*{phone}"/><br/><br/>
+
+<label for="email">email :</label>
+<input type="text" id="email" name="email" class="info" th:field="*{email}"/><br/><br/>
+
+<label for="adresse">adresse :</label>
+<input type="text" id="adresse" name="adresse" class="info" th:field="*{adresse}"/><br/><br/>
+
+<label for="photo">photo :</label>
+<input type="text" id="photo" name="photo" class="info" th:field="*{photo}"/><br/><br/>
+
+<input type="submit" value="envoye" class="dim_block4"/>
+<input type="reset" value="Annuler" class="dim_block4"/>
+
+</fieldset>
+</form>
+
+</body>
+</html>
