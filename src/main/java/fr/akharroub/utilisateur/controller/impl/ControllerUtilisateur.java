@@ -53,9 +53,25 @@ public class ControllerUtilisateur implements IControllerUtilisateur{
 
 	@Override
 	@PostMapping("ajouter-user")
-	public String ajouterutilisateurV(Model model,@ModelAttribute Utilisateur user) {
+	public String ajouterutilisateurV(Model model,@ModelAttribute Utilisateur u) {
+		service.ajouterutilisateur(u);
+		return "redirect:/utilisateurs";
+	}
+
+	@Override
+	@GetMapping("/modifier")
+	public String modifierformulaire(Model model,@RequestParam("id") Integer id) {
+		Utilisateur m = service.findOne(id);
+		model.addAttribute("u", m);
 		
-		return null;
+		return "modifier-utilisateur-formulaire";
+	}
+
+	@Override
+	@PostMapping("/modifier-user")
+	public String validerutilisateur(Model model,@ModelAttribute Utilisateur u) {
+		service.modefierutilisateur(u);
+		return "redirect:/utilisateurs";
 	}
 
 }

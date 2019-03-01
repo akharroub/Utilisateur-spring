@@ -33,4 +33,17 @@ public class ServiceUtilisateur implements IServiceUtilisateur{
 		
 	}
 
+	@Override
+	public void ajouterutilisateur(Utilisateur user) {
+		repository.save(user);
+		
+	}
+
+	@Override
+	public void modefierutilisateur(Utilisateur user) {
+		repository.save(user);
+		
+		
+	}
+
 }

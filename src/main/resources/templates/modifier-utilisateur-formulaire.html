@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/modifier.css}"/>
+</head>
+<body>
+<form th:action="@{modifier-user}" method="post" th:object="${u}">
+<fieldset>
+<legend>Vos Coordonnées</legend>
+
+<label for="nom">id</label>
+<input hidden="hidden" type="text" id="id" name="id" class="info" th:value="${u.id}" th:field="*{id}"/><br/><br/>
+
+<label for="nom">nom</label>
+<input type="text" id="nom" name="nom" class="info" th:value="${u.nom}" th:field="*{nom}"/><br/><br/>
+
+<label for="prenom">prenom :</label>
+<input type="text" id="prenom" name="prenom" class="info" th:value="${u.prenom}" th:field="*{prenom}"/><br/><br/>
+
+<label for="numero">numero :</label>
+<input type="text" id="numero" name="numero" class="info" th:value="${u.numero}" th:field="*{numero}"/><br/><br/>
+
+<label for="phone">phone :</label>
+<input type="text" id="phone" name="phone" class="info" th:value="${u.phone}" th:field="*{phone}"/><br/><br/>
+
+<label for="email">email :</label>
+<input type="text" id="email" name="email" class="info" th:value="${u.email}" th:field="*{email}"/><br/><br/>
+
+<label for="adresse">adresse :</label>
+<input type="text" id="adresse" name="adresse" class="info" th:value="${u.adresse}" th:field="*{adresse}"/><br/><br/>
+
+<label for="photo">photo :</label>
+<input type="text" id="photo" name="photo" class="info" th:value="${u.photo}" th:field="*{photo}"/><br/><br/>
+
+<input type="submit" value="envoye" class="dim_block4"/>
+<input type="reset" value="Annuler" class="dim_block4"/>
+
+</fieldset>
+</form>
+</body>
+</html>
